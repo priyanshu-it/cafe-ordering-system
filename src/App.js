@@ -39,7 +39,7 @@ function App() {
             </>
           ) : (
             <>
-              <Link to="/your-cafe" onClick={closeMenu}><i className="fa fa-home"></i> Home Page</Link>
+              <Link to="/cafe-ordering-system" onClick={closeMenu}><i className="fa fa-home"></i> Home Page</Link>
               <Link to="/status" onClick={closeMenu}><i className="fa fa-exclamation"></i> Order Status</Link>
               <a href="https://github.com/priyanshu-it" target="_blank" rel="noopener noreferrer" onClick={closeMenu}>
                 <i className="fa fa-phone"></i> Contact-Us
@@ -53,7 +53,7 @@ function App() {
 
       <div className="content">
         <Routes>
-          <Route path="/your-cafe" element={<CustomerOrderForm />} />
+          <Route path="/cafe-ordering-system" element={<CustomerOrderForm />} />
           <Route path="/status" element={<OrderStatus />} />
           <Route path="/admin-login" element={!user ? <AdminLogin /> : <Navigate to="/admin" replace />} />
           <Route path="/admin" element={user ? <AdminDashboard /> : <Navigate to="/admin-login" replace />} />
